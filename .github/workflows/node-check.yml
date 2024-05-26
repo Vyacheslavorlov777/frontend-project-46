@@ -1,0 +1,32 @@
+name: Node CI
+
+on:
+  - push
+
+env:
+  CI: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: make install
+      - run: make lint
+      - run: make test
+        uses: paambaati/codeclimate-action@v5.0.0
+        env:
+          CC_TESTS: ${{ secrets.CC_TESTS }}
+        with:
+          coverageCommand: make test-coverage
+          debug: true
