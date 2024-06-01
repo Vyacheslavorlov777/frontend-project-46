@@ -19,3 +19,7 @@ gendiff -h
 gendiff __fixtures__/file1.json __fixtures__/file2.json
 [![asciicast](https://asciinema.org/a/2s5wbYuGsugSzSN3sV99pybY6.svg)](https://asciinema.org/a/2s5wbYuGsugSzSN3sV99pybY6)
 
+gendiff __fixtures__/file1.yml __fixtures__/file2.yml
+gendiff __fixtures__/file1.yaml __fixtures__/file2.yaml     
+[![asciicast](https://asciinema.org/a/DoH1uxvE9Rtz5EEQ38hh3R2TJ.svg)](https://asciinema.org/a/DoH1uxvE9Rtz5EEQ38hh3R2TJ)
+
