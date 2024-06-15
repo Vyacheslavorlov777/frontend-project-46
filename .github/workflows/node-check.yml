@@ -1,10 +1,9 @@
-name: Node CI
+ name: node CI
 
-on:
-  - push
+on: [push]
 
-env:
-  CI: true
+# env:
+#   CI: true
 
 jobs:
   build:
@@ -12,21 +11,22 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [20.x]
+        node-version: [18.x]
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
       - run: make install
       - run: make lint
       - run: make test
-      - uses: paambaati/codeclimate-action@v5.0.0
+      - name: Test & publish code coverage
+        uses: paambaati/codeclimate-action@v5.0.0
         env:
-          CC_TESTS: ${{ secrets.CC_TEST_REPORTER_ID }}
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         with:
           coverageCommand: make test-coverage
           debug: true
