@@ -1,6 +1,6 @@
  name: node CI
 
-on: [push]
+on: push
 
 # env:
 #   CI: true
