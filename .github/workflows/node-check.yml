@@ -26,7 +26,7 @@ jobs:
       - run: make test
         uses: paambaati/codeclimate-action@v5.0.0
         env:
-          CC_TESTS: ${{ secrets.CC_TESTS }}
+          CC_TESTS: ${{ secrets.CC_TEST_REPORTER_ID }}
         with:
           coverageCommand: make test-coverage
           debug: true
