@@ -46,7 +46,7 @@ const buildTreeStylish = (tree) => {
                     `${quantitySpase(depth)}+ ${node.key}: ${reading(node.newValue, depth + 1)}`];
             }
             default:{
-                throw Error('Error, data - uncorrect')
+                throw Error('Uncorrect')
             };
         };
     };

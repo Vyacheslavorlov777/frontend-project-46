@@ -112,7 +112,7 @@ const getTreeDif = (data1, data2) => {
 	};
 };
 
-// console.log(getTreeDif(dat1, dat1));
+// console.log(JSON.stringify(getTreeDif(dat1, dat2), null, 2));
 
 
 export default getTreeDif;

@@ -27,3 +27,10 @@ Step 7:
 gendiff __fixtures__/file1.json __fixtures__/file2.json
 [![asciicast](https://asciinema.org/a/WBuKobepZOF7tVPjhgQg49o5Q.svg)](https://asciinema.org/a/WBuKobepZOF7tVPjhgQg49o5Q)
 
+Step 8:
+gendiff --format plain __fixtures__/file1.json __fixtures__/file2.json
+[![asciicast](https://asciinema.org/a/EbANYTz9tkWdpog6UmacCgKWh.svg)](https://asciinema.org/a/EbANYTz9tkWdpog6UmacCgKWh)
+
+Step 9:
+gendiff --format json __fixtures__/file1.json __fixtures__/file2.json
+[![asciicast](https://asciinema.org/a/Hvg7u0G2dnUpJ2Z3PSFtUou34.svg)](https://asciinema.org/a/Hvg7u0G2dnUpJ2Z3PSFtUou34)
