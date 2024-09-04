@@ -16,7 +16,7 @@ const reading = (data, depth) => {
     return String(data);
   }
   const keys = _.keys(data);
-  const string = keys.map((key) => `${quantitySpase(depth)} ${key}: ${reading(data[key], depth + 1)}`);
+  const string = keys.map((key) => `${quantitySpase(depth)}  ${key}: ${reading(data[key], depth + 1)}`);
   return join(string, depth);
 };
 
