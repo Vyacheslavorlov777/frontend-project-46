@@ -41,7 +41,7 @@ const buildTreeStylish = (tree) => {
         return `${quantitySpase(depth)}  ${node.key}: ${reading(node.value, depth + 1)}`;
       }
       case 'various': {
-        return [`${quantitySpase(depth)}-  ${node.key}: ${reading(node.oldValue, depth + 1)}`,
+        return [`${quantitySpase(depth)}- ${node.key}: ${reading(node.oldValue, depth + 1)}`,
           `${quantitySpase(depth)}+ ${node.key}: ${reading(node.newValue, depth + 1)}`];
       }
       default: {
